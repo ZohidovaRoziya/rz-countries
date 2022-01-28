@@ -1,0 +1,61 @@
+/* CUSTOM PROPS CSS START  */
+:root {
+    --primary-color: #000;
+    --text-color: #fff;
+}
+
+/* GLOBAL CSS START  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing:inherit;
+}
+
+*:focus {
+    outline: 2px dotted var(--primary-color);
+    outline-offset: 3px;
+}
+
+html {
+    height: 100%;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CONTAINER CSS START  */
+.container {
+     width: 100%;
+     max-width: 1200px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 50px;
+     padding-right: 50px;
+}
+
+/* SAIT MAIN CSS START  */
+.site-main {
+    flex-grow: 1;
+}

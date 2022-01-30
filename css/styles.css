@@ -1,176 +1,199 @@
 /* CUSTOM PROPS CSS START  */
 :root {
-    --body-bg: #fafafa;
-    --element-bg: #fff;
-    --text-color: #111517;
+  --body-bg: #fafafa;
+  --element-bg: #fff;
+  --text-color: #111517;
 }
 
 /* GOOGLE FONTS  */
 @font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/NunitoSans-Light.woff2") format("woff2"),
-        url("../fonts/NunitoSans-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-Light.woff2") format("woff2"),
+    url("../fonts/NunitoSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"),
-        url("../fonts/NunitoSans-SemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/NunitoSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/NunitoSans-ExtraBold.woff2") format("woff2"),
-        url("../fonts/NunitoSans-ExtraBold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-ExtraBold.woff2") format("woff2"),
+    url("../fonts/NunitoSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/NunitoSans-Regular.woff2") format("woff2"),
-        url("../fonts/NunitoSans-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-Regular.woff2") format("woff2"),
+    url("../fonts/NunitoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-
-
 
 /* GLOBAL CSS START  */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing:inherit;
+  box-sizing: inherit;
 }
 
 *:focus {
-    outline: 2px dotted var(--text-color);
-    outline-offset: 3px;
+  outline: 2px dotted var(--text-color);
+  outline-offset: 3px;
 }
 
 html {
-    height: 100%;
-    box-sizing:border-box;
-    scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: var(--body-bg);
-    padding: 0;
-    margin: 0;
-    font-family: "Nunito Sans","Arial", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--text-color);
-    transition: background-color 0.4s ease,
-        color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--body-bg);
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /* DARK MODE CSS START  */
 .dark-mode {
-    --body-bg: #202c36;
-    --element-bg: #2b3844;
-    --text-color: #fff;
+  --body-bg: #202c36;
+  --element-bg: #2b3844;
+  --text-color: #fff;
 }
-
 
 /* CONTAINER CSS START  */
 .container {
-     width: 100%;
-     max-width: 1320px;
-     margin-left: auto;
-     margin-right: auto;
-     padding-left: 20px;
-     padding-right: 20px;
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* SAIT MAIN CSS START  */
 .site-main {
-    flex-grow: 1;
+  flex-grow: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
-
 
 /* SITE HEADER CSS START  */
 .site-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    background-color: var(--element-bg);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
-    white-space: nowrap;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: var(--element-bg);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
 }
 
 .site-header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-header-logo {
-    font-size: 24px;
-    line-height: normal;
-    font-weight: 800;
-    color: var(--text-color);
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 800;
+  color: var(--text-color);
 }
 
 .site-header-logo:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .site-header-logo:active {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .site-header-theme-toggler {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    color: var(--text-color);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--text-color);
 }
 
-.site-header-theme-toggler:hover{
-    opacity: 0.8;
+.site-header-theme-toggler:hover {
+  opacity: 0.8;
 }
 
-.site-header-theme-toggler:hover{
-    opacity: 0.6;
+.site-header-theme-toggler:hover {
+  opacity: 0.6;
 }
 
 .site-header-theme-toggler-inner {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .site-header-theme-toggler-text {
-    margin-left: 8px;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 600;
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+/* FILTERS CSS START  */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters-search-input {
+    min-width: 480px;
+    padding: 18px 74px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+    background-color: var(--element-bg);
+    color: var(--text-color);
+}
+
+.filters-region-select {
+    min-width: 200px;
+    border: 0;
+    padding: 18px 24px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+    background-color: var(--element-bg);
+    color: var(--text-color)
 }

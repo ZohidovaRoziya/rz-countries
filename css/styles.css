@@ -58,7 +58,7 @@
 }
 
 *:focus {
-    outline: 2px dotted var(--primary-color);
+    outline: 2px dotted #000;
     outline-offset: 3px;
 }
 
@@ -112,4 +112,63 @@ a {
 /* SAIT MAIN CSS START  */
 .site-main {
     flex-grow: 1;
+}
+
+
+/* SITE HEADER CSS START  */
+.site-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--element-bg);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+    white-space: nowrap;
+}
+
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header-logo {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.site-header-logo:hover {
+    opacity: 0.8;
+}
+
+.site-header-logo:active {
+    opacity: 0.6;
+}
+
+.site-header-theme-toggler {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.site-header-theme-toggler:hover{
+    opacity: 0.8;
+}
+
+.site-header-theme-toggler:hover{
+    opacity: 0.6;
+}
+
+.site-header-theme-toggler-inner {
+    display: flex;
+    align-items: center;
+}
+
+.site-header-theme-toggler-text {
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
 }

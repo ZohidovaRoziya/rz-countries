@@ -58,7 +58,7 @@
 }
 
 *:focus {
-    outline: 2px dotted #000;
+    outline: 2px dotted var(--text-color);
     outline-offset: 3px;
 }
 
@@ -79,6 +79,8 @@ body {
     font-size: 14px;
     line-height: 16px;
     color: var(--text-color);
+    transition: background-color 0.4s ease,
+        color 0.4s ease;
 }
 
 img {

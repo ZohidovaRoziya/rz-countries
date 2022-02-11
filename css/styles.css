@@ -78,8 +78,10 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: var(--text-color);
-  transition: background-color var(--transtion-duration) ease, color var(--transtion-duration) ease;
+  transition: background-color var(--transtion-duration) ease,
+    color var(--transtion-duration) ease;
 }
+
 
 img {
   max-width: 100%;
@@ -95,6 +97,11 @@ a {
   --body-bg: #202c36;
   --element-bg: #2b3844;
   --text-color: #fff;
+}
+
+/* HIDDEN CSS START  */
+.hidden {
+  display: none !important;
 }
 
 /* CONTAINER CSS START  */
@@ -142,6 +149,7 @@ a {
 
 .site-header-logo:hover {
   opacity: 0.8;
+  color: var(--text-color);
 }
 
 .site-header-logo:active {
@@ -185,25 +193,45 @@ a {
 }
 
 .filters-search-input {
-    min-width: 480px;
-    padding: 18px 74px;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
-    background-color: var(--element-bg);
-    color: var(--text-color);
+  min-width: 480px;
+  padding: 18px 74px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+  background-color: var(--element-bg);
+  color: var(--text-color);
 }
 
 .filters-region-select {
-    min-width: 200px;
-    border: 0;
-    padding: 18px 24px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
-    background-color: var(--element-bg);
-    color: var(--text-color)
+  min-width: 200px;
+  border: 0;
+  padding: 18px 24px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+  background-color: var(--element-bg);
+  color: var(--text-color);
 }
 
+/* LOADER SECTION CSS START  */
+.loader-section {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.spinner-grow {
+  width: 100px;
+  height: 100px;
+  outline: 5px dotted #000;
+  outline-offset: 7px;
+}
+
+.text-light {
+  color: #fff !important;
+  outline: 5px dotted #fff;
+  outline-offset: 7px;
+}
 
 /* INDEX COUNTREIS SCC START  */
 .index-counteis-list {
@@ -224,21 +252,32 @@ a {
 
 /* INDEX COUNTRY CSS START  */
 .index-country {
+  display: flex;
+  flex-direction: column;
   border-radius: 7px;
   overflow: hidden;
   background-color: var(--element-bg);
   color: var(--text-color);
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  min-height: 420px;
+  cursor: pointer;
+}
+
+.index-country:hover {
+  transform: scale(1.1);
+  background-color: rgba(153, 153, 153, 0.1);
 }
 
 .index-country-flag {
   width: 100%;
   height: 160px;
   object-fit: cover;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.04);
 }
 
 .index-country-info {
-  padding: 24px 24px 48px;
+  padding: 24px;
+  flex-grow: 1;
 }
 
 .index-country-name {
@@ -253,6 +292,11 @@ a {
   color: var(--text-color);
 }
 
+.index-country-link:hover {
+  opacity: 0.6;
+  color: var(--text-color);
+}
+
 .index-country-details {
   margin: 0;
 }
@@ -260,6 +304,7 @@ a {
 .index-country-details-item {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .index-country-details-item:not(:last-child) {
@@ -273,8 +318,6 @@ a {
 .index-country-details-value {
   margin-left: 4px;
 }
-
-
 
 /* COUNTRY PAGE CSS START  */
 .country-page-back-wrapper {
@@ -291,11 +334,12 @@ a {
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
 }
 
-.country-page-back-link:hover{
+.country-page-back-link:hover {
   opacity: 0.8;
+  color: var(--text-color);
 }
 
-.country-page-back-link:hover{
+.country-page-back-link:hover {
   opacity: 0.6;
 }
 
@@ -310,10 +354,10 @@ a {
   line-height: 20px;
 }
 
-
 /* COUNTRY PAGE FLAG CSS START  */
 .country-page-flag-info {
   display: flex;
+  padding-bottom: 20px;
 }
 
 .country-page-flag {
@@ -353,20 +397,23 @@ a {
   display: flex;
 }
 
-.country-page-details-item:not(:last-child){
+.country-page-details-item:not(:last-child) {
   margin-bottom: 12px;
 }
 
 .country-page-details-title {
-  margin-right: 4px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
   font-weight: 600;
+  margin-right: 8px;
 }
 .country-page-details-value {
   margin: 0;
   padding: 0;
+  font-size: 18px;
   font-weight: 300;
 }
-
 
 .country-page-border-countries {
   display: flex;
@@ -378,7 +425,6 @@ a {
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 16px;
-  font-size: 16px;
   line-height: 20px;
   font-weight: 600;
 }
@@ -395,7 +441,7 @@ a {
   margin-bottom: 4px;
   min-width: 96px;
   padding: 5px 10px;
-  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.11);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.11);
   border-radius: 2px;
   background-color: var(--element-bg);
   color: var(--text-color);
@@ -404,7 +450,7 @@ a {
     color var(--transtion-duration) ease;
 }
 
-.country-page-border-link:not(:last-child){
+.country-page-border-link:not(:last-child) {
   margin-right: 10px;
 }
 

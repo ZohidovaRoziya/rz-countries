@@ -54,13 +54,13 @@ function showResualt(data) {
     console.log(borders);
     
 
-    //* BORDERS START 
-    let borderDiv = document.createElement("div")
-    borderDiv.classList.add("country-page-border-countries-list");
-    borderDiv.innerHTML = `
-          <a class="country-page-border-link">${Object.keys(borders)}</a>`
+    // //* BORDERS START 
+    // let borderDiv = document.createElement("div")
+    // borderDiv.classList.add("country-page-border-countries-list");
+    // borderDiv.innerHTML = `
+    //       <a class="country-page-border-link">${borders[0]}</a>`
 
-          
+    // console.log(borders); 
 
     let div = document.createElement("div");
     div.classList.add("container");
@@ -132,9 +132,10 @@ function showResualt(data) {
 
 
             <section class="country-page-border-countries">
-            <h2 class="country-page-border-countries-heading">Border Countries: </h2>
-                          ${borderDiv}
-    </section>
+            <h2 class="country-page-border-countries-heading">Border Countries:</h2>
+                     <p class="country-page-border-countries-list " > 
+                    <a class="country-page-border-link" href="#"> ${borders} </a>
+                    </p></section>
 
         </div>
     </div>

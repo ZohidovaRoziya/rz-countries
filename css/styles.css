@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* CUSTOM PROPS CSS START  */
 :root {
   --body-bg: #fafafa;
@@ -47,13 +54,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 *:focus {
@@ -63,13 +72,19 @@
 
 html {
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   background-color: var(--body-bg);
   padding: 0;
@@ -78,6 +93,10 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: var(--text-color);
+  -webkit-transition: background-color var(--transtion-duration) ease,
+    color var(--transtion-duration) ease;
+  -o-transition: background-color var(--transtion-duration) ease,
+    color var(--transtion-duration) ease;
   transition: background-color var(--transtion-duration) ease,
     color var(--transtion-duration) ease;
 }
@@ -116,7 +135,9 @@ a {
 
 /* SAIT MAIN CSS START  */
 .site-main {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-top: 48px;
   padding-bottom: 48px;
 }
@@ -130,14 +151,21 @@ a {
   padding-top: 24px;
   padding-bottom: 24px;
   background-color: var(--element-bg);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
   white-space: nowrap;
 }
 
 .site-header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .site-header-logo {
@@ -173,8 +201,12 @@ a {
 }
 
 .site-header-theme-toggler-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-header-theme-toggler-text {
@@ -186,9 +218,15 @@ a {
 
 /* FILTERS CSS START  */
 .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 48px;
 }
 
@@ -200,7 +238,9 @@ a {
   position: absolute;
   left: 32px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: var(--text-color);
   pointer-events: none;
   opacity: 0.5;
@@ -211,7 +251,8 @@ a {
   padding: 18px 74px;
   border: 0;
   border-radius: 5px;
-  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
   background-color: var(--element-bg);
   color: var(--text-color);
 }
@@ -221,7 +262,8 @@ a {
   border: 0;
   padding: 18px 24px;
   border-radius: 5px;
-  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
   background-color: var(--element-bg);
   color: var(--text-color);
 }
@@ -229,8 +271,12 @@ a {
 /* LOADER SECTION CSS START  */
 .loader-section {
   padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -249,8 +295,11 @@ a {
 
 /* INDEX COUNTREIS SCC START  */
 .index-counteis-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-left: -75px;
@@ -266,33 +315,49 @@ a {
 
 /* INDEX COUNTRY CSS START  */
 .index-country {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 7px;
   overflow: hidden;
   background-color: var(--element-bg);
   color: var(--text-color);
-  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
   min-height: 420px;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .index-country:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: rgba(153, 153, 153, 0.1);
 }
 
 .index-country-flag {
   width: 100%;
   height: 160px;
-  object-fit: cover;
-  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.04);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.04);
 }
 
 .index-country-info {
   padding: 24px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .index-country-name {
@@ -317,9 +382,14 @@ a {
 }
 
 .index-country-details-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .index-country-details-item:not(:last-child) {
@@ -341,12 +411,17 @@ a {
 
 .country-page-back-link {
   padding: 10px 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--text-color);
   background-color: var(--element-bg);
   border-radius: 6px;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
 }
 
 .country-page-back-link:hover {
@@ -371,6 +446,8 @@ a {
 
 /* COUNTRY PAGE FLAG CSS START  */
 .country-page-flag-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 20px;
 }
@@ -378,9 +455,13 @@ a {
 .country-page-flag {
   width: 560px;
   height: 400px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 11px;
-  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -400,8 +481,12 @@ a {
 }
 
 .country-page-dls-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 70px;
 }
 
@@ -409,6 +494,8 @@ a {
   width: 250px;
 }
 .country-page-details-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -431,9 +518,14 @@ a {
 }
 
 .country-page-border-countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .country-page-border-countries-heading {
@@ -447,8 +539,11 @@ a {
 .country-page-border-countries-list {
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .country-page-border-link {
@@ -456,11 +551,16 @@ a {
   margin-bottom: 4px;
   min-width: 96px;
   padding: 5px 10px;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.11);
   border-radius: 2px;
   background-color: var(--element-bg);
   color: var(--text-color);
   text-align: center;
+  -webkit-transition: bbackground-color var(--transtion-duration) ease,
+    color var(--transtion-duration) ease;
+  -o-transition: bbackground-color var(--transtion-duration) ease,
+    color var(--transtion-duration) ease;
   transition: bbackground-color var(--transtion-duration) ease,
     color var(--transtion-duration) ease;
 }
